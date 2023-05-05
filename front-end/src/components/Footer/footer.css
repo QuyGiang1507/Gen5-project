@@ -1,0 +1,16 @@
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellow;
+}
+
+p {
+    margin: 8px 0;
+}
+
+h5 {
+    font-weight: 700;
+}

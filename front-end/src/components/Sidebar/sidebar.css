@@ -1,0 +1,10 @@
+.sidebar-link {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.sidebar-link:hover {
+    background: rgb(235, 235, 240);
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+.product-detail-link {
+    color: black;
+}
+
+.product-detail-link:hover {
+    color: #0000FF;
+}
+
+.listProduct-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.list-product-item {
+    border: 1px solid #ebe9eb; 
+    width: 100%;
+}
+
+.list-product-item:hover {
+    border: 1px solid red;
+}

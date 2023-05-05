@@ -1,0 +1,18 @@
+.admin-list-item-img {
+    width: 100px;
+    height: auto;
+}
+
+.admin-item-list-query {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.admin-item-list-label {
+    margin-right: 8px;
+}
+
+.isHidden{
+    display: none;
+}

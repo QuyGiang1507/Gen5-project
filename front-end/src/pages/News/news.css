@@ -1,0 +1,17 @@
+.news-detail-container {
+    margin-bottom: 16px;
+}
+
+.news-detail-link {
+    color: black;
+    height: 160px;
+}
+
+.news-detail-link:hover {
+    color: #0000FF;
+}
+
+.listNews-pagination {
+    display: flex;
+    justify-content: center;
+}

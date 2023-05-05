@@ -1,0 +1,15 @@
+.detail-item__buy-btn {
+    width: 100px;
+    margin: 8px 0 0 8px
+}
+
+@media screen and (max-width: 388px) {
+    .detail-item__buy-btn {
+        width: 100px;
+        margin: 8px 0 0 0
+    }
+}
+
+.isHidden {
+    display: none;
+}

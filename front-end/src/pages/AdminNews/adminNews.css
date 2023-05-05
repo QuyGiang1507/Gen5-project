@@ -1,0 +1,19 @@
+.admin-list-news-img {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.admin-news-list-query {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.admin-news-list-label {
+    margin-right: 8px;
+}
+
+.isHidden{
+    display: none;
+}

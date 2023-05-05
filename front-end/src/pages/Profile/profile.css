@@ -1,0 +1,162 @@
+.profile-sidebar-link {
+    color: black;
+}
+
+.profile-sidebar-link:hover {
+    background: rgb(235, 235, 240);
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    padding: 6px;
+    cursor: pointer;
+    background: linear-gradient(270deg, #3fa1a9, #79f1a4);
+}
+
+.img-wrap{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.img-upload:before{
+    content: "\f093";
+    font-size: 90px;
+    position: absolute;
+    padding-top: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #63d3a6;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #fff;
+}
+
+.img-upload:hover:before{
+    opacity: 1;
+}
+
+.profile-img-upload{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.photo-upload-icon{
+    position: absolute;
+    background: rgb(11, 116, 229);
+    color: #ffffff;
+    font-size: 14px;
+    width: 16px;
+    height: 16px;
+    right: 4px;
+    bottom: 6px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 3px 3px;
+}
+  
+input{
+    border-radius: 4px;
+    border: 1px solid #b7b7b7;
+    padding: 8px 8px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid #64d488;
+}
+
+textarea:focus{
+    outline: none;
+    border: 1px solid #64d488;
+}
+
+input::placeholder{
+    color: #bebebe;
+}
+
+input[type="text"]:disabled {
+    background: #ffffff;
+    border: none;
+  }
+
+select{
+    border-radius: 4px;
+    border: 1px solid #b7b7b7;
+    padding: 8px 8px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+select:focus{
+    outline: none;
+    border: 1px solid #64d488;
+}
+
+.react-date-picker__wrapper{
+    border-radius: 4px;
+    border: 1px solid #b7b7b7;
+    padding: 4px 8px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.react-date-picker__wrapper:focus{
+    outline: none;
+    border: 1px solid #64d488;
+}
+
+.profile-name-col{
+    padding: 0 0 0 32px;
+}
+
+.profile-name{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+    .profile-sidebar{
+        display: none;
+    }
+    .row {
+        margin-right: -0px;
+    }
+    .row>*{
+        padding-right: 12px;
+    }
+    .profile-name-label{
+        margin-left: -16px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .profile-name{
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.isHidden{
+    display: none;
+}
