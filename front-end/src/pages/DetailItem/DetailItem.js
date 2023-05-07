@@ -68,7 +68,9 @@ export default function DetailItem() {
     }
 
     const addItemToCart = async () => {
-        if(quantity > 0) {
+        if(!isAuthenticated) {
+            navigate(`/login?returnUrl=/product/${productId}`)
+        } else if(quantity > 0) {
             try {
                 const res = await request({
                     url: '/api/cart',
@@ -92,7 +94,9 @@ export default function DetailItem() {
     }
 
     const buyItem = async () => {
-        if(quantity > 0) {
+        if(!isAuthenticated) {
+            navigate(`/login?returnUrl=/product/${productId}`)
+        } else if(quantity > 0) {
             try {
                 const res = await request({
                     url: '/api/cart',
@@ -190,23 +194,18 @@ export default function DetailItem() {
                                             >+</Button>
                                         </Form.Group>
                                     </Row>
-                                    {(isAuthenticated) ? 
-                                        (
-                                            <div>
-                                                <Button 
-                                                    variant="danger" 
-                                                    style={{ width: "200px", marginTop: "8px" }}
-                                                    onClick={addItemToCart}
-                                                >Thêm vào giỏ hàng
-                                                </Button>
-                                                <Button 
-                                                    variant="danger" 
-                                                    className="detail-item__buy-btn"
-                                                    onClick={buyItem}
-                                                >Mua ngay
-                                                </Button>
-                                            </div>
-                                    ): <p></p>}
+                                    <Button 
+                                        variant="danger" 
+                                        style={{ width: "200px", marginTop: "8px" }}
+                                        onClick={addItemToCart}
+                                    >Thêm vào giỏ hàng
+                                    </Button>
+                                    <Button 
+                                        variant="danger" 
+                                        className="detail-item__buy-btn"
+                                        onClick={buyItem}
+                                    >Mua ngay
+                                    </Button>
                                 </Form>
                             </Col>
                         </Row>
