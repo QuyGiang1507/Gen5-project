@@ -205,7 +205,7 @@ export default function Home () {
                 {homeSlideData.data.map((item) => (
                     <Carousel.Item className="home-carousel-item" key={item._id}>
                         <img
-                            style={{marginBottom: "", maxHeight: "360px", objectFit: "cover", backgroundColor: "#ffffff", border: "1px solid #ccc", borderRadius: "3px", width: "60%", height: "100%"}}
+                            style={{marginBottom: "", maxHeight: "360px", objectFit: "cover", backgroundColor: "#ffffff", border: "1px solid #ccc", borderRadius: "3px", width: "55%", height: "100%"}}
                             className="d-block"
                             src={item.iconUrl}
                             alt={item.productName}

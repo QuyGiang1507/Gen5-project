@@ -1,9 +1,10 @@
 .home-carousel-caption {
-    width: 40%;
+    width: 45%;
     color: black;
-    left: 60%;
+    left: 55%;
     top: 0%;
     margin: -24px 0 0 12px;
+    padding: 16px 3% 16px 0;
 }
 
 .home__slide {
@@ -24,10 +25,12 @@
 
 .carousel-control-next {
     right: 0;
+    width: 3%;
 }
 
 .carousel-control-prev {
     left: 0;
+    width: 3%;
 }
 
 @media screen and (min-width: 769px) {
@@ -40,6 +43,7 @@
         width: 100%;
         height: 50vh;
         align-items: center;
+        padding: 0 3%;
     }
 }
 
@@ -48,5 +52,6 @@
         width: 100%;
         height: 20vh;
         align-items: center;
+        padding: 0 3%;
     }
 }
