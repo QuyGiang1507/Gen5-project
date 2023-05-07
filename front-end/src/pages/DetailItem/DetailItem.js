@@ -3,11 +3,13 @@ import Footer from '../../components/Footer/Footer';
 import { useParams, useNavigate } from "react-router-dom";
 import { Container, Row, Col, Carousel, Form, Button, Alert } from 'react-bootstrap';
 import React, { useState, useEffect, useCallback } from 'react';
+import useAuth from '../../hooks/useAuth';
 import request from '../../api/request';
 import './detailItem.css'
 
 export default function DetailItem() {
     const navigate = useNavigate();
+    const { isAuthenticated } = useAuth();
     const { productId } = useParams();
     const [ quantity, setQuantity ] = useState(0);
 
@@ -188,18 +190,23 @@ export default function DetailItem() {
                                             >+</Button>
                                         </Form.Group>
                                     </Row>
-                                    <Button 
-                                        variant="danger" 
-                                        style={{ width: "200px", marginTop: "8px" }}
-                                        onClick={addItemToCart}
-                                    >Thêm vào giỏ hàng
-                                    </Button>
-                                    <Button 
-                                        variant="danger" 
-                                        className="detail-item__buy-btn"
-                                        onClick={buyItem}
-                                    >Mua ngay
-                                    </Button>
+                                    {(isAuthenticated) ? 
+                                        (
+                                            <div>
+                                                <Button 
+                                                    variant="danger" 
+                                                    style={{ width: "200px", marginTop: "8px" }}
+                                                    onClick={addItemToCart}
+                                                >Thêm vào giỏ hàng
+                                                </Button>
+                                                <Button 
+                                                    variant="danger" 
+                                                    className="detail-item__buy-btn"
+                                                    onClick={buyItem}
+                                                >Mua ngay
+                                                </Button>
+                                            </div>
+                                    ): <p></p>}
                                 </Form>
                             </Col>
                         </Row>
